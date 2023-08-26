@@ -1,5 +1,5 @@
 import Game from "../pages/Game.tsx";
-import {createBrowserRouter, RouteObject} from "react-router-dom";
+import {createBrowserRouter, Navigate, RouteObject} from "react-router-dom";
 import Home from "../pages/Home.tsx";
 
 export const routes: RouteObject[] = [
@@ -10,6 +10,10 @@ export const routes: RouteObject[] = [
     {
         path: '/game',
         element: <Game/>
+    },
+    {
+        path: '*',
+        element: <Navigate to={'/'}/>
     }
 ]
 
