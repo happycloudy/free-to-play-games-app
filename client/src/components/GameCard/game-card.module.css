@@ -1,0 +1,8 @@
+.card {
+    width: 240px;
+}
+
+.cardFooter {
+    display: flex;
+    justify-content: space-between;
+}
