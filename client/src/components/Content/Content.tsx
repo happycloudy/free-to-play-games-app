@@ -1,9 +1,14 @@
 import {Layout} from "antd";
+import {ReactNode} from "react";
 
-const Content = () => {
+type IProps = {
+    children: ReactNode
+}
+
+const Content = ({children}: IProps) => {
     return (
         <Layout.Content>
-            Контент
+            {children}
         </Layout.Content>
     );
 };
