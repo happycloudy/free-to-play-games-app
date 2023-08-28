@@ -1,13 +1,11 @@
 import Layout from "../components/Layout/Layout.tsx";
-import Filter from "../components/Filter/Filter.tsx";
-import Sorter from "../components/Sorter/Sorter.tsx";
 import GamesList from "../components/GamesList/GamesList.tsx";
+import SearchForm from "../components/SearchForm/SearchForm.tsx";
 
 const Home = () => {
     return (
         <Layout>
-            <Filter/>
-            <Sorter/>
+            <SearchForm/>
             <GamesList/>
         </Layout>
     );
