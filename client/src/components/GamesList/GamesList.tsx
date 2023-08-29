@@ -1,9 +1,9 @@
-import type {IGame} from "../../types/IGame.ts";
+import type {IGameShort} from "../../types/IGameShort.ts";
 import {Space} from "antd";
 import GameCard from "../GameCard/GameCard.tsx";
 
 // TODO: фейк дата
-const games: IGame[] = [
+const games: IGameShort[] = [
     {
         id: 540,
         publisher: 'Activision Blizzard',

@@ -1,4 +1,4 @@
-import Layout from "../../components/Layout/Layout.tsx";
+import Layout from "../../components/utils/Layout/Layout.tsx";
 import GameInfo from "../../components/GameInfo/GameInfo.tsx";
 import GameSystemRequirements from "../../components/GameSystemRequirements/GameSystemRequirements.tsx";
 import GameCarousel from "../../components/GameCarousel/GameCarousel.tsx";

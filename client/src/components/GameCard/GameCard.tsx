@@ -1,11 +1,11 @@
-import {IGame} from "../../types/IGame.ts";
+import {IGameShort} from "../../types/IGameShort.ts";
 import {Card, Space} from "antd";
 import GameCardImg from "../GameCardImg/GameCardImg.tsx";
 import styles from './game-card.module.css'
 import {useNavigate} from "react-router-dom";
 
 type IProps = {
-    game: IGame
+    game: IGameShort
 }
 
 const GameCard = ({game}: IProps) => {

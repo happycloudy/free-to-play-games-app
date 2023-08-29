@@ -1,4 +1,4 @@
-import Layout from "../../components/Layout/Layout.tsx";
+import Layout from "../../components/utils/Layout/Layout.tsx";
 import GamesList from "../../components/GamesList/GamesList.tsx";
 import SearchForm from "../../components/SearchForm/SearchForm.tsx";
 
