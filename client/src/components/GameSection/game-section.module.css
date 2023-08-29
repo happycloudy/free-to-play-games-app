@@ -1,0 +1,32 @@
+@import '../../styles/global.css';
+
+.section {
+    background: white;
+    padding: 24px;
+    margin: 0 300px;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (max-width: 1200px) {
+    .section {
+        margin: 0 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        margin: 0 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        margin: 0;
+    }
+}

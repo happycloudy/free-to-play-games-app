@@ -1,6 +1,6 @@
-import Game from "../pages/Game.tsx";
+import Game from "../pages/Game/Game.tsx";
 import {createBrowserRouter, Navigate, RouteObject} from "react-router-dom";
-import Home from "../pages/Home.tsx";
+import Home from "../pages/Home/Home.tsx";
 
 export const routes: RouteObject[] = [
     {
