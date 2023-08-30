@@ -1,18 +1,19 @@
 import {configureStore} from "@reduxjs/toolkit";
-import {useDispatch} from "react-redux";
 import {gamesReducer} from "./slices/gamesSlice/gamesSlice.ts";
 import {searchReducer} from "./slices/searchSlice/searchSlice.ts";
+import {freeGamesApi} from "../services/api.ts";
 
 const store = configureStore({
     reducer: {
         games: gamesReducer,
-        search: searchReducer
-    }
+        search: searchReducer,
+        [freeGamesApi.reducerPath]: freeGamesApi.reducer,
+    },
+    middleware: (getDefaultMiddleware) =>
+        getDefaultMiddleware().concat(freeGamesApi.middleware),
 })
 
 export type RootState = ReturnType<typeof store.getState>
 
-export type AppDispatch = typeof store.dispatch
-export const useAppDispatch: () => AppDispatch = useDispatch
 
 export default store
