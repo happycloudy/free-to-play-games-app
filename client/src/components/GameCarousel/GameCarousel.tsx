@@ -1,22 +1,29 @@
-import {Carousel, Image} from "antd";
+import {Carousel} from "antd";
 import Section from "../GameSection/Section.tsx";
+import {IScreenshot} from "../../types/IScreenshot.ts";
+import styles from "./game-carousel.module.css"
+import {memo} from "react";
 
 type IProps = {
-    images: string[]
+    images: IScreenshot[]
 }
 
-const GameCarousel = ({images}: IProps) => {
+const GameCarousel = memo(({images}: IProps) => {
     return (
         <Section>
-            <Carousel>
+            <Carousel autoplay>
                 {
-                    images.map(link => (
-                        <Image src={link}/>
+                    images.map(screenshot => (
+                        <img className={styles.img}
+                             src={screenshot.image}
+                             key={screenshot.id}
+                             alt={'game screenshot'}
+                        />
                     ))
                 }
             </Carousel>
         </Section>
     );
-};
+});
 
 export default GameCarousel;

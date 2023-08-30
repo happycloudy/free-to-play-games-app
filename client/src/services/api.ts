@@ -9,7 +9,6 @@ export const freeGamesApi = createApi({
     reducerPath: 'freeGamesApi',
     baseQuery: fetchBaseQuery({
         baseUrl: apiData.baseUrl,
-        headers: apiData.headers,
     }),
     endpoints: (builder) => ({
         fetchGames: builder.query<IGameShort[], Partial<IFetchGamesParams> | void>({
@@ -32,8 +31,8 @@ export const freeGamesApi = createApi({
             }))
         }),
 
-        fetchGameById: builder.query<IGame, number>({
-            query: (id) => `https://www.freetogame.com/api/game?id=${id}`,
+        fetchGameById: builder.query<IGame, string>({
+            query: (id) => `game?id=${id}`,
         }),
     }),
 })

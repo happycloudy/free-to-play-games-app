@@ -1,27 +1,33 @@
 import {Card, Image, Space, Typography} from "antd";
 import Section from "../GameSection/Section.tsx";
+import {IGameShort} from "../../types/IGameShort.ts";
+import {memo} from "react";
 
-const GameInfo = () => {
+type IProps = Omit<IGameShort, 'id'> & {
+    developer: string
+}
+
+const GameInfo = memo((props: IProps) => {
     return (
         <Section centered>
-            <Card cover={<Image src={'https://www.freetogame.com/g/517/thumbnail.jpg'}/>} title="Game name">
+            <Card cover={<Image src={props.thumbnail}/>} title={props.title}>
                 <Space direction={'vertical'} size={5}>
                     <Typography.Text>
-                        <b>Издатель:</b> 123
+                        <b>Издатель:</b> {props.publisher}
                     </Typography.Text>
                     <Typography.Text>
-                        <b>Developer:</b> 123
+                        <b>Developer:</b> {props.developer}
                     </Typography.Text>
                     <Typography.Text>
-                        <b>Release date</b>: 123
+                        <b>Release date</b>: {props.release_date}
                     </Typography.Text>
                     <Typography.Text>
-                        <b>Genre</b>: 123
+                        <b>Genre</b>: {props.genre}
                     </Typography.Text>
                 </Space>
             </Card>
         </Section>
     );
-};
+});
 
 export default GameInfo;

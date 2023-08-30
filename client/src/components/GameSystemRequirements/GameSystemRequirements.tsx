@@ -2,10 +2,11 @@ import {Col, Row, Typography} from "antd";
 import {ISystemRequirements} from "../../types/ISystemRequirements.ts";
 import styles from './game-system-requirements.module.css'
 import Section from "../GameSection/Section.tsx";
+import {memo} from "react";
 
 const titleLevel = 3
 
-const GameSystemRequirements = (props: ISystemRequirements) => {
+const GameSystemRequirements = memo((props: ISystemRequirements) => {
     return (
         <Section>
             <Typography.Title level={2}>
@@ -55,6 +56,6 @@ const GameSystemRequirements = (props: ISystemRequirements) => {
             </Row>
         </Section>
     );
-};
+});
 
 export default GameSystemRequirements;
