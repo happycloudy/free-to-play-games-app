@@ -1,19 +1,25 @@
 import {Form, Select} from "antd";
+import {memo} from "react";
+import {sortByOptions} from "../../constants/sortByOptions.ts";
 
 type IProps = {
     label: string
+    value: string
+    handleChange: (value: string) => void
 }
 
-const options = [
-    {label: 'Дата релиза', value: 'release_date'},
-]
 
-const SearchFormSelectField = ({label}: IProps) => {
-    return (
-        <Form.Item label={label}>
-            <Select placeholder={'Select sort option'} options={options}/>
-        </Form.Item>
-    );
-};
+const SearchFormSelectField = memo(
+    ({label, value, handleChange}: IProps) => {
+        return (
+            <Form.Item label={label}>
+                <Select placeholder={'Select sort option'}
+                        options={sortByOptions}
+                        value={value}
+                        onChange={handleChange}
+                />
+            </Form.Item>
+        );
+    });
 
 export default SearchFormSelectField;

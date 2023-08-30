@@ -3,12 +3,12 @@ import GameCard from "../GameCard/GameCard.tsx";
 import {useFetchGamesQuery} from "../../services/api.ts";
 
 const GamesList = () => {
-    const {data: games, error, isLoading} = useFetchGamesQuery()
+    const {data: games, error, isLoading} = useFetchGamesQuery({})
 
     return (
         <>
             {
-                error ? <Empty/> : <></>
+                error ? <Empty description={'Error happened'}/> : <></>
             }
             {
                 isLoading ? <Skeleton active/> : <></>

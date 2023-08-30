@@ -28,4 +28,10 @@ const searchSlice = createSlice({
     }
 })
 
+export const {
+    updateGenre,
+    updatePlatform,
+    updateSortBy
+} = searchSlice.actions
+
 export const searchReducer = searchSlice.reducer
