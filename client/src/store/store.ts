@@ -1,11 +1,9 @@
 import {configureStore} from "@reduxjs/toolkit";
-import {gamesReducer} from "./slices/gamesSlice/gamesSlice.ts";
 import {searchReducer} from "./slices/searchSlice/searchSlice.ts";
 import {freeGamesApi} from "../services/api.ts";
 
 const store = configureStore({
     reducer: {
-        games: gamesReducer,
         search: searchReducer,
         [freeGamesApi.reducerPath]: freeGamesApi.reducer,
     },
