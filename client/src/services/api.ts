@@ -2,19 +2,14 @@ import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react";
 import {IGameShort} from "../types/IGameShort.ts";
 import {IGame} from "../types/IGame.ts";
 import {IFetchGamesParams, IFetchGamesParamsKeys} from "../types/IFetchGamesParams.ts";
-
-const baseUrl = 'https://free-to-play-games-database.p.rapidapi.com/api'
-const headers = {
-    'X-RapidAPI-Key': '535696714bmsh2899fb4d31b8741p1001ebjsn608c13325599',
-    'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
-}
+import {apiData} from "../constants/api/apiData.ts";
 
 
 export const freeGamesApi = createApi({
     reducerPath: 'freeGamesApi',
     baseQuery: fetchBaseQuery({
-        baseUrl: baseUrl,
-        headers: headers
+        baseUrl: apiData.baseUrl,
+        headers: apiData.headers
     }),
     endpoints: (builder) => ({
         fetchGames: builder.query<IGameShort[], Partial<IFetchGamesParams> | void>({
