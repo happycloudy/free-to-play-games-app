@@ -10,7 +10,11 @@ type IProps = Omit<IGameShort, 'id'> & {
 const GameInfo = memo((props: IProps) => {
     return (
         <Section centered>
-            <Card cover={<Image src={props.thumbnail}/>} title={props.title}>
+            <Card cover={<Image src={props.thumbnail}/>}
+                  title={
+                      <Typography.Title>{props.title}</Typography.Title>
+                  }
+            >
                 <Space direction={'vertical'} size={5}>
                     <Typography.Text>
                         <b>Издатель:</b> {props.publisher}

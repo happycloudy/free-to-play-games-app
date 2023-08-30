@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1f737753-8301-4275-b7e7-9eb2b5c83944" name="Changes" comment="add readme">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/services/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/api.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +58,7 @@
       <updated>1693090624848</updated>
       <workItem from="1693090626112" duration="613000" />
       <workItem from="1693092723519" duration="84000" />
-      <workItem from="1693429813641" duration="2535000" />
+      <workItem from="1693429813641" duration="2770000" />
     </task>
     <task id="LOCAL-00001" summary="add readme">
       <created>1693431982753</created>

@@ -1,5 +1,5 @@
 export const platformOptions = [
     {value: '', label: 'All platforms'},
-    {value: 'PC', label: 'PC'},
-    {value: 'web', label: 'Web'}
+    {value: 'pc', label: 'PC'},
+    {value: 'browser', label: 'Browser(Web)'}
 ]

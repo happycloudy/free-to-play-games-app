@@ -1,3 +1,9 @@
-.img {
-    max-height: 50vh
+.wrap {
+    padding: 0 150px;
+}
+
+@media (max-width: 1200px) {
+    .wrap {
+        padding: 0;
+    }
 }

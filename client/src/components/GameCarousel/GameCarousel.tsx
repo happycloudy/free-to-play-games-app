@@ -11,17 +11,20 @@ type IProps = {
 const GameCarousel = memo(({images}: IProps) => {
     return (
         <Section>
-            <Carousel autoplay>
-                {
-                    images.map(screenshot => (
-                        <img className={styles.img}
-                             src={screenshot.image}
-                             key={screenshot.id}
-                             alt={'game screenshot'}
-                        />
-                    ))
-                }
-            </Carousel>
+            <div className={styles.wrap}>
+                <Carousel autoplay>
+                    {
+                        images.map(screenshot => (
+                            <img
+                                className={styles.img}
+                                src={screenshot.image}
+                                key={screenshot.id}
+                                alt={'game screenshot'}
+                            />
+                        ))
+                    }
+                </Carousel>
+            </div>
         </Section>
     );
 });
