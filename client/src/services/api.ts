@@ -3,6 +3,7 @@ import {IGameShort} from "../types/IGameShort.ts";
 import {IGame} from "../types/IGame.ts";
 import {IFetchGamesParams, IFetchGamesParamsKeys} from "../types/IFetchGamesParams.ts";
 import {apiData} from "../constants/api/apiData.ts";
+import {pageUptime} from "../constants/pageUptime.ts";
 
 
 export const freeGamesApi = createApi({
@@ -35,7 +36,7 @@ export const freeGamesApi = createApi({
 
         fetchGameById: builder.query<IGame, string>({
             query: (id) => `game?id=${id}`,
-            keepUnusedDataFor: 60 * 5
+            keepUnusedDataFor: pageUptime / 1000
         }),
     }),
 })
