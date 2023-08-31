@@ -1,15 +1,9 @@
-import React from 'react'
 import {Layout, Typography} from "antd";
-
-const headerStyles: React.CSSProperties = {
-    backgroundColor: '#7dbcea',
-    textAlign: 'center',
-    height: 'auto'
-}
+import styles from './header.module.css'
 
 const Header = () => {
     return (
-        <Layout.Header style={headerStyles}>
+        <Layout.Header className={styles.header}>
             <Typography.Title>
                 Free-To-Play Games
             </Typography.Title>
