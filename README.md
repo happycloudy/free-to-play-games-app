@@ -2,12 +2,20 @@
 
 --- 
 
-## Установка и запуск приложение
+## Установка и запуск приложения
 
 ```bash
 $ cd server
 $ npm install
 # дальше старт приложения
+$ npm run start
+```
+
+Отдельно для React приложения
+
+```bash
+$ cd client
+$ npm install
 $ npm run start
 ```
 
