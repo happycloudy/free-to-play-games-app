@@ -1,5 +1,5 @@
 import {Col, Empty, Row, Skeleton} from "antd";
-import GameCard from "../GameCard/GameCard.tsx";
+import GameCard from "../GamesCard/GameCard.tsx";
 import {useLazyFetchGamesQuery} from "../../services/api.ts";
 import {useAppSelector} from "../../store/hooks/useSelector.ts";
 import {useCallback, useEffect, useState} from "react";
@@ -8,22 +8,13 @@ import {IGameShort} from "../../types/IGameShort.ts";
 const itemsPerScroll = 50
 
 const GamesList = () => {
+    const [scrollTop, setScrollTop] = useState(0)
     const filter = useAppSelector(state => state.search)
     const [
         trigger,
         {data: games, error, isFetching}
     ] = useLazyFetchGamesQuery()
-
     const [gamesSlice, setGamesSlice] = useState<IGameShort[]>([])
-
-    const handleScroll = () => {
-        const innerHeight = window.innerHeight
-        const scrollTop = document.documentElement.scrollTop
-        const offsetHeight = document.documentElement.offsetHeight
-        if (innerHeight + scrollTop !== offsetHeight) return
-
-        handleUpdateGameSlice()
-    }
 
     const handleUpdateGameSlice = () => {
         if (!games) return
@@ -31,6 +22,12 @@ const GamesList = () => {
             ...prevState,
             ...games!.slice(prevState.length + 1, prevState.length + 1 + itemsPerScroll)
         ])
+    }
+
+    const handleScroll = () => {
+        const innerHeight = window.innerHeight
+        const scrollTop = document.documentElement.scrollTop
+        setScrollTop(innerHeight + scrollTop)
     }
 
     const fetch = useCallback(() => trigger({
@@ -45,7 +42,7 @@ const GamesList = () => {
     }, [filter.sortBy, filter.genre, filter.platform])
 
     useEffect(() => {
-        setGamesSlice(() => games ? games.slice(0, itemsPerScroll) : [])
+        setGamesSlice(games ? games.slice(0, itemsPerScroll) : [])
     }, [games])
 
     useEffect(() => {
@@ -56,6 +53,12 @@ const GamesList = () => {
             req.abort()
         };
     }, [])
+
+    useEffect(() => {
+        const offsetHeight = document.documentElement.offsetHeight
+        if (scrollTop !== offsetHeight) return
+        handleUpdateGameSlice()
+    }, [scrollTop])
 
     return (
         <>
@@ -72,7 +75,6 @@ const GamesList = () => {
                     ))
                 }
             </Row>
-
             {
                 isFetching ? <Skeleton active/> : <></>
             }
