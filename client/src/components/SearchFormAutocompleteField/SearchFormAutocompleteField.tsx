@@ -1,5 +1,5 @@
 import {Form, Select} from "antd";
-import React, {memo} from "react";
+import {memo} from "react";
 import {ISelectOption} from "../../types/ISelectOption.ts";
 
 type IProps = {
