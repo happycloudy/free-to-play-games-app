@@ -7,7 +7,7 @@ type IProps = {
     centered?: boolean
 }
 
-const Section = ({children, centered}: IProps) => {
+const GameSection = ({children, centered}: IProps) => {
     const sectionClasses = useMemo(() => classNames(styles.section, {
         [styles.centered]: centered
     }), [centered])
@@ -19,4 +19,4 @@ const Section = ({children, centered}: IProps) => {
     );
 };
 
-export default Section;
+export default GameSection;

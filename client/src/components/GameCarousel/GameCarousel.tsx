@@ -1,5 +1,5 @@
 import {Carousel} from "antd";
-import Section from "../GameSection/Section.tsx";
+import GameSection from "../GameSection/GameSection.tsx";
 import {IScreenshot} from "../../types/IScreenshot.ts";
 import styles from "./game-carousel.module.css"
 import {memo} from "react";
@@ -10,7 +10,7 @@ type IProps = {
 
 const GameCarousel = memo(({images}: IProps) => {
     return (
-        <Section>
+        <GameSection>
             <div className={styles.wrap}>
                 <Carousel autoplay>
                     {
@@ -25,7 +25,7 @@ const GameCarousel = memo(({images}: IProps) => {
                     }
                 </Carousel>
             </div>
-        </Section>
+        </GameSection>
     );
 });
 

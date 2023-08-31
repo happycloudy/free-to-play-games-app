@@ -1,5 +1,5 @@
 import {Card, Image, Space, Typography} from "antd";
-import Section from "../GameSection/Section.tsx";
+import GameSection from "../GameSection/GameSection.tsx";
 import {IGameShort} from "../../types/IGameShort.ts";
 import {memo} from "react";
 
@@ -9,7 +9,7 @@ type IProps = Omit<IGameShort, 'id'> & {
 
 const GameInfo = memo((props: IProps) => {
     return (
-        <Section centered>
+        <GameSection centered>
             <Card cover={<Image src={props.thumbnail}/>}
                   title={
                       <Typography.Title>{props.title}</Typography.Title>
@@ -30,7 +30,7 @@ const GameInfo = memo((props: IProps) => {
                     </Typography.Text>
                 </Space>
             </Card>
-        </Section>
+        </GameSection>
     );
 });
 
