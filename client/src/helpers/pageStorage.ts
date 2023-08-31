@@ -1,7 +1,7 @@
 import {IGame} from "../types/IGame.ts";
+import {pageUptime} from "../constants/pageUptime.ts";
 
 const storageKey = 'pageStorage'
-const critMsTime = 1000 * 60 * 5
 
 type StorageType = IGame & {
     createTimeStamp: string
@@ -27,7 +27,7 @@ export const pageStorage = {
         if (game) {
             const now = Date.now()
             const pageDate = parseInt(game.createTimeStamp)
-            if (now - pageDate > critMsTime) {
+            if (now - pageDate > pageUptime) {
                 localStorage.setItem(
                     storageKey,
                     JSON.stringify(pages.filter(item => item.id !== id))

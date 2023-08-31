@@ -1,0 +1,1 @@
+export const pageUptime = 1000 * 60 * 5 //ms
