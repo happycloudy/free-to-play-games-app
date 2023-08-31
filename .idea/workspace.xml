@@ -5,7 +5,61 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f737753-8301-4275-b7e7-9eb2b5c83944" name="Changes" comment="add readme">
+      <change afterPath="$PROJECT_DIR$/server/dist/api/api.controller.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/api/api.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/api/api.controller.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/api/api.module.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/api/api.module.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/api/api.module.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/api/api.service.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/api/api.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/api/api.service.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/app.controller.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/app.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/app.controller.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/app.module.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/app.module.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/app.module.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/app.service.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/app.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/app.service.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/game/game.controller.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/game/game.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/game/game.controller.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/game/game.module.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/game/game.module.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/game/game.module.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/game/game.service.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/game/game.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/game/game.service.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/games/games.controller.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/games/games.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/games/games.controller.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/games/games.module.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/games/games.module.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/games/games.module.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/games/games.service.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/games/games.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/games/games.service.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/main.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/main.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/tsconfig.build.tsbuildinfo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/types/filter-params.type.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/types/filter-params.type.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/types/filter-params.type.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/static/assets/index-29e7c5aa.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/static/assets/index-2e77e5d3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/static/assets/index-494c9d5c.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/static/assets/index-88ffec03.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/static/assets/index-bd27219e.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/static/assets/index-e5ac8286.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/static/assets/index-ede3a954.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/static/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/static/vite.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/server/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,27 +81,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "javascript.nodejs.core.library.configured.version": "18.12.1",
-    "javascript.nodejs.core.library.typings.version": "18.16.3",
-    "last_opened_file_path": "D:/Tests/avito-tech2023",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "yarn",
-    "prettierjs.PrettierConfiguration.Package": "D:\\Tests\\avito-tech2023\\server\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "preferences.general",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.12.1&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.16.3&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Tests/avito-tech2023&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;D:\\Tests\\avito-tech2023\\server\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -59,6 +113,7 @@
       <workItem from="1693090626112" duration="613000" />
       <workItem from="1693092723519" duration="84000" />
       <workItem from="1693429813641" duration="2770000" />
+      <workItem from="1693492438157" duration="930000" />
     </task>
     <task id="LOCAL-00001" summary="add readme">
       <created>1693431982753</created>
