@@ -42,6 +42,6 @@ export const freeGamesApi = createApi({
 
 
 export const {
-    useFetchGamesQuery,
-    useFetchGameByIdQuery
+    useLazyFetchGamesQuery,
+    useLazyFetchGameByIdQuery
 } = freeGamesApi

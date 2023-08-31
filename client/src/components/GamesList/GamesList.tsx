@@ -1,19 +1,19 @@
 import {Col, Empty, Row, Skeleton} from "antd";
 import GameCard from "../GameCard/GameCard.tsx";
-import {useFetchGamesQuery} from "../../services/api.ts";
+import {useLazyFetchGamesQuery} from "../../services/api.ts";
 import {useAppSelector} from "../../store/hooks/useSelector.ts";
-import {useEffect, useState} from "react";
+import {useCallback, useEffect, useState} from "react";
 import {IGameShort} from "../../types/IGameShort.ts";
 
 const itemsPerScroll = 50
 
 const GamesList = () => {
     const filter = useAppSelector(state => state.search)
-    const {data: games, error, isLoading, refetch} = useFetchGamesQuery({
-        'sort-by': filter.sortBy,
-        genre: filter.genre,
-        platform: filter.platform
-    })
+    const [
+        trigger,
+        {data: games, error, isFetching}
+    ] = useLazyFetchGamesQuery()
+
     const [gamesSlice, setGamesSlice] = useState<IGameShort[]>([])
 
     const handleScroll = () => {
@@ -33,8 +33,15 @@ const GamesList = () => {
         ])
     }
 
+    const fetch = useCallback(() => trigger({
+        'sort-by': filter.sortBy,
+        genre: filter.genre,
+        platform: filter.platform
+    }, true), [filter.sortBy, filter.genre, filter.platform])
+
     useEffect(() => {
-        refetch()
+        const req = fetch()
+        return req.abort
     }, [filter.sortBy, filter.genre, filter.platform])
 
     useEffect(() => {
@@ -42,9 +49,13 @@ const GamesList = () => {
     }, [games])
 
     useEffect(() => {
+        const req = fetch()
         window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    })
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+            req.abort()
+        };
+    }, [])
 
     return (
         <>
@@ -54,7 +65,7 @@ const GamesList = () => {
 
             <Row justify={'space-around'} gutter={[5, 10]}>
                 {
-                    !error && gamesSlice && gamesSlice.map(item => (
+                    !error && !isFetching && gamesSlice && gamesSlice.map(item => (
                         <Col key={item.id}>
                             <GameCard game={item}/>
                         </Col>
@@ -63,7 +74,7 @@ const GamesList = () => {
             </Row>
 
             {
-                isLoading ? <Skeleton active/> : <></>
+                isFetching ? <Skeleton active/> : <></>
             }
         </>
     );
