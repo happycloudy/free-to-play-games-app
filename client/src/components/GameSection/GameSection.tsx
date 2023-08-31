@@ -1,6 +1,5 @@
-import {ReactNode, useMemo} from "react";
+import {ReactNode} from "react";
 import styles from './game-section.module.css'
-import * as classNames from "classnames";
 
 type IProps = {
     children: ReactNode
@@ -8,12 +7,8 @@ type IProps = {
 }
 
 const GameSection = ({children, centered}: IProps) => {
-    const sectionClasses = useMemo(() => classNames(styles.section, {
-        [styles.centered]: centered
-    }), [centered])
-
     return (
-        <section className={sectionClasses}>
+        <section className={`${styles.section} ${centered ? styles.centered : ''}`}>
             {children}
         </section>
     );
