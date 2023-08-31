@@ -8,7 +8,7 @@ import GameSystemRequirements from "../../components/GameSystemRequirements/Game
 import GameCarousel from "../../components/GameCarousel/GameCarousel.tsx";
 import GameInfo from "../../components/GameInfo/GameInfo.tsx";
 import Loader from "../../components/Loader/Loader.tsx";
-import {pageStorage} from "../../helpers/pageStorage.ts";
+import {gameLocalStorage} from "../../helpers/gameLocalStorage.ts";
 import {IGame} from "../../types/IGame.ts";
 
 const Game = () => {
@@ -25,7 +25,7 @@ const Game = () => {
     }
 
     useEffect(() => {
-        const gameInStore = pageStorage.gameInList(parseInt(params.id!))
+        const gameInStore = gameLocalStorage.gameInList(parseInt(params.id!))
         if (gameInStore) {
             setCachedGame(gameInStore)
             return
@@ -37,12 +37,12 @@ const Game = () => {
 
     useEffect(() => {
         if (game) {
-            const gameInStore = pageStorage.gameInList(game.id)
+            const gameInStore = gameLocalStorage.gameInList(game.id)
             if (gameInStore) {
                 setCachedGame(gameInStore)
             } else {
                 setCachedGame(game)
-                pageStorage.addPage(game)
+                gameLocalStorage.addPage(game)
             }
         }
     }, [game])

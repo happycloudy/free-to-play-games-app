@@ -7,7 +7,7 @@ type StorageType = IGame & {
     createTimeStamp: string
 }
 
-export const pageStorage = {
+export const gameLocalStorage = {
     addPage: function (data: IGame) {
         const storage = localStorage.getItem(storageKey)
         const pages: StorageType[] = storage ? JSON.parse(storage) : []
